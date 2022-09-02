@@ -82,8 +82,6 @@ public class ContactDetails {
                 ", zip=" + zip +
                 ", phoneNumber=" + phoneNumber +
                 '}';
-
-        
     }
 }
 

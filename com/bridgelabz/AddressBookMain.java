@@ -33,7 +33,6 @@ public class AddressBookMain {
         details.add(d1);
     }
 
-
     public void editContact() {
 
         System.out.println("Enter FirstName to edit");
@@ -51,6 +50,19 @@ public class AddressBookMain {
 
     }
 
+    public void deleteDetails(){
+        System.out.println("Enter firstName to delete");
+        String name = sc2.next();
+        for (int i=0; i<details.size(); i++){
+            if(details.get(i).getFirstName().equalsIgnoreCase(name)){
+                details.remove(i);
+                System.out.println("Deleted "+ details);
+            }else {
+                System.out.println("Enter valid name");
+            }
+        }
+    }
+
     public void show(){
         System.out.println(details);
     }
@@ -62,7 +74,7 @@ public class AddressBookMain {
             int i=0;
             while (i==0){
                 System.out.println("Welcome to AddressBook");
-                System.out.println("Choose option 1: ADD  2: EDIT 3: SHOW");
+                System.out.println("Choose option 1: ADD  2: EDIT 3: SHOW 4: DELETE");
                 int choose = sc1.nextInt();
                 switch (choose){
                     case 1:
@@ -73,6 +85,9 @@ public class AddressBookMain {
                         break;
                     case 3:
                         a1.show();
+                        break;
+                    case 4:
+                        a1.deleteDetails();
                         break;
                     default:
                         System.out.println("Enter Correct Details");
