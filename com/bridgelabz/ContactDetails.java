@@ -5,16 +5,6 @@ public class ContactDetails {
     private int zip;
     private long phoneNumber;
 
-    public ContactDetails(String firstName, String lastName, String address, String city, String state, String email, int zip, long phoneNumber) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.address = address;
-        this.city = city;
-        this.state = state;
-        this.email = email;
-        this.zip = zip;
-        this.phoneNumber = phoneNumber;
-    }
 
     public String getFirstName() {
         return firstName;
@@ -78,6 +68,20 @@ public class ContactDetails {
 
     public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = phoneNumber;
-        
+    }
+
+    @Override
+    public String toString() {
+        return "ContactDetails{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", email='" + email + '\'' +
+                ", zip=" + zip +
+                ", phoneNumber=" + phoneNumber +
+                '}';
     }
 }
+
