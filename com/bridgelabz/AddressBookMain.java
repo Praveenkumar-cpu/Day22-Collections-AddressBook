@@ -11,7 +11,7 @@ public class AddressBookMain {
     public static void main(String[] args) {
         Scanner sc1 = new Scanner(System.in);
 
-            AddressBook address = new AddressBook();
+            MultipleAddressBook mul = new MultipleAddressBook();
 
             int i=0;
             while (i==0){
@@ -20,17 +20,23 @@ public class AddressBookMain {
                 int choose = sc1.nextInt();
                 switch (choose){
                     case 1:
-                        address.addContact();
+                        mul.addAddressBook();
                         break;
                     case 2:
-                        address.editContact();
+                        mul.addContact();
                         break;
                     case 3:
-                        address.show();
+                        mul.editContactInBook();
                         break;
                     case 4:
-                        address.deleteDetails();
+                        mul.deleteContactInBook();
                         break;
+                    case 5:
+                        mul.deleteAddressBook();
+                    case 6:
+                        mul.printBook();
+                    case 7:
+                        mul.printContactsInBook();
                     default:
                         System.out.println("Enter Correct Details");
                         break;
