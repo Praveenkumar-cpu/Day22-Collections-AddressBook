@@ -5,6 +5,14 @@ public class ContactDetails {
     private int zip;
     private long phoneNumber;
 
+    public ContactDetails(String firstName, String lastName, String address, String city, String state, int zipCode, long phoneNumber, String email) {
+
+    }
+
+    public ContactDetails() {
+
+    }
+
 
     public String getFirstName() {
         return firstName;
